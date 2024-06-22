@@ -11,6 +11,12 @@ dotenv.config({ path: ".env" });
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  // globalSetup: "./global-setup",
+  timeout: 30 * 1000,
+  expect: {
+    timeout: 5 * 1000,
+    toHaveScreenshot: { maxDiffPixels: 0 },
+  },
   testDir: "./tests",
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -35,7 +41,11 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1920, height: 980 },
+        headless: true,
+      },
     },
 
     // {
