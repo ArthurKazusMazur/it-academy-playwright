@@ -1,22 +1,26 @@
-import { test, expect } from "@playwright/test";
+import { test } from "@playwright/test";
+import { LoginPage } from "../support/pages/login.page";
+import { ProfilePage } from "../support/pages/profile.page";
+import { userData } from "../support/data/user.data";
 
-// test.use({ storageState: "userSession.json" });
-test("Test 1", async ({ page }) => {
-  await page.goto("http://localhost:2221/my-account");
-  //   await page.locator("#userName").fill("kaszulkIns");
-  //   await page.locator("#password").fill("1046512@Kliu");
-  //   await page.locator("#login").click();
+test("Test with login. Should pass", async ({ page }) => {
+  // const loginPage = new LoginPage(page);
+  const profilePage = new ProfilePage(page);
 
-  await expect(page.locator("h1")).toHaveText("My Account");
+  // await loginPage.goto();
+  // await loginPage.doUserLogin(
+  //   userData.validUserLogin.username,
+  //   userData.validUserLogin.password
+  // );
+  await profilePage.goto();
+  // await page.waitForLoadState();
+
+  await profilePage.checkIfLogged();
 });
 
-test("Test 2", async ({ page }) => {
-  await page.goto("http://localhost:2221/my-account");
-  //   await page.locator("#userName").fill("kaszulkIns");
-  //   await page.locator("#password").fill("1046512@Kliu");
-  //   await page.locator("#login").click();
+test("Test without login. Login should be preserved", async ({ page }) => {
+  const profilePage = new ProfilePage(page);
 
-  const logOutButton = page.locator("a", { hasText: "Checkout" });
-
-  await expect(logOutButton).toBeVisible();
+  await profilePage.goto();
+  await profilePage.checkIfLogged();
 });

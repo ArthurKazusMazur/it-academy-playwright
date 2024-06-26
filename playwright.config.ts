@@ -4,17 +4,17 @@ import { defineConfig, devices } from "@playwright/test";
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-import dotenv from "dotenv";
-dotenv.config({ path: ".env" });
+// import dotenv from "dotenv";
+// dotenv.config({ path: ".env" });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  // globalSetup: "./global-setup",
+  globalSetup: "./global-setup",
   timeout: 30 * 1000,
   expect: {
-    timeout: 5 * 1000,
+    timeout: 15 * 1000,
     toHaveScreenshot: { maxDiffPixels: 0 },
   },
   testDir: "./tests",
@@ -31,7 +31,6 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "https://demoqa.com",
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
@@ -45,6 +44,8 @@ export default defineConfig({
         ...devices["Desktop Chrome"],
         viewport: { width: 1920, height: 980 },
         headless: true,
+        storageState: "./userSession.json",
+        baseURL: "https://demoqa.com",
       },
     },
 
