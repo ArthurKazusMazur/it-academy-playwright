@@ -25,3 +25,5 @@ export class MainPage extends BasePage {
     await this.cardForms.click();
   }
 }
+
+export default MainPage;

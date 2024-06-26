@@ -6,5 +6,8 @@ export const userData = {
     phoneNumber: "0123456789",
     currentAddress: "Paris, 18-24, Picadilly circus",
   },
-  nonValidData: {},
+  validUserLogin: {
+    username: "kaszulkIns",
+    password: "1046512@Kliu",
+  },
 };
