@@ -1,0 +1,121 @@
+{
+  "cookies": [
+    {
+      "name": "_gid",
+      "value": "GA1.2.1535081599.1719427840",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1719514240,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-109033876-1",
+      "value": "1",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1719427900,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__eoi",
+      "value": "ID=c1fb4397cd784105:T=1719427840:RT=1719427840:S=AA-AfjbPe51moNw5kKtRHV22O-zJ",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1734979840,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6Imthc3p1bGtJbnMiLCJwYXNzd29yZCI6IjEwNDY1MTJAS2xpdSIsImlhdCI6MTcxOTQyNzg0MX0.PghzJivqwPvTZhxV9PD-HfQvuFih2jcWQAssbPS5K-o",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "expires",
+      "value": "2024-07-03T18%3A50%3A41.295Z",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "userID",
+      "value": "f8393dab-6e4c-4298-abeb-4e2d3ab4d9d8",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "userName",
+      "value": "kaszulkIns",
+      "domain": "demoqa.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_MVRXK93D28",
+      "value": "GS1.1.1719427843.1.0.1719427843.60.0.0",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1753987843.121444,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.145033545.1719427840",
+      "domain": ".demoqa.com",
+      "path": "/",
+      "expires": 1753987843.122285,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demoqa.com",
+      "localStorage": [
+        {
+          "name": "totalCalls",
+          "value": "0"
+        },
+        {
+          "name": "totalCallsTimeout",
+          "value": "0"
+        },
+        {
+          "name": "lastSuccessfullAd",
+          "value": "0"
+        },
+        {
+          "name": "google_auto_fc_cmp_setting",
+          "value": "[1]"
+        },
+        {
+          "name": "__VASTUtil__",
+          "value": "__VASTUtil__"
+        }
+      ]
+    }
+  ]
+}
