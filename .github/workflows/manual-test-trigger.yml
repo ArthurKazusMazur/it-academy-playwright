@@ -1,6 +1,6 @@
 name: Playwright tests triggered manually
 on:
- repository_dispatch
+ workflow_dispatch
 jobs:
   test:
     runs-on: ubuntu-latest
