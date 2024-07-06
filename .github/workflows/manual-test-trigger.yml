@@ -8,10 +8,10 @@ jobs:
     - uses: actions/checkout@v4
     # Создаем Docker image
     - name: Build Docker image 
-    - run: docker build -t playwright-tests -f Dockerfile.custom .
+      run: docker build -t playwright-tests -f Dockerfile.custom .
     # Запуск Docker контейнера и запуск тестов в нем
     - name: Run Docker container with Playwright tests
-    - run: docker run playwright-tests
+      run: docker run playwright-tests
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

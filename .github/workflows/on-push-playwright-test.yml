@@ -13,10 +13,10 @@ jobs:
     - uses: actions/checkout@v4
     # Создаем Docker image
     - name: Build Docker image using official image
-    - run: docker build -f Dockerfile.official .
+      run: docker build -f Dockerfile.official .
     # Запуск Docker контейнера и запуск тестов в нем
     - name: Run Docker container with Playwright tests
-    - run: docker run f8016e141b77
+      run: docker run f8016e141b77
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
