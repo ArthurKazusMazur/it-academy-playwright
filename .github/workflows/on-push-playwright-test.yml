@@ -11,15 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 18
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test --grep='demoqa.interactions.spec.ts'
+    # Создаем Docker image
+    - name: Build Docker image using official image
+    - run: docker build -f Dockerfile.official .
+    # Запуск Docker контейнера и запуск тестов в нем
+    - name: Run Docker container with Playwright tests
+    - run: docker run f8016e141b77
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
