@@ -1,5 +1,5 @@
 # Используем базовый образ от Playwright
-FROM mcr.microsoft.com/playwright:v1.45.1-jammy
+FROM mcr.microsoft.com/playwright:latest
 
 # Создание рабочей директории внутри контейнера
 WORKDIR /usr/src/app
