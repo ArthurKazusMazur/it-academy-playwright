@@ -13,7 +13,7 @@ jobs:
     - name: Run Docker container with Playwright tests
       run: docker run playwright-tests
     - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
+      if: always()
       with:
         name: playwright-report
         path: playwright-report/
