@@ -17,4 +17,4 @@ COPY . .
 RUN npx playwright install --with-deps
 
 # Команда для запука тестов
-CMD ["npx", "playwright", "test", "--grep=demoqa.textbox.spec.ts"]
+CMD ["npx", "playwright", "test", "--grep=demoqa.textbox.spec.ts", "--reporter=html"]
