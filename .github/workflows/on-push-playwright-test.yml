@@ -16,7 +16,7 @@ jobs:
         run: docker build -t plw-tests -f Dockerfile.official .
       # Запуск Docker контейнера и запуск тестов в нем
       - name: Run Docker container with Playwright tests
-        run: docker run docker run -v ${{ github.workspace }}/playwright-report:/usr/src/app/playwright-report plw-tests
+        run: docker run -v ${{ github.workspace }}/playwright-report:/usr/src/app/playwright-report plw-tests
       - uses: actions/upload-artifact@v4
         with:
           name: playwright-report

@@ -4,6 +4,9 @@ FROM mcr.microsoft.com/playwright
 # Создание рабочей директории внутри контейнера
 WORKDIR /usr/src/app
 
+# Создание директории для отчета
+RUN mkdir -p /usr/src/app/playwright-report
+
 # Копирование package.json, package-lock.json. 
 COPY package*.json ./
 
