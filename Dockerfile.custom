@@ -16,5 +16,8 @@ COPY . .
 # Установка браузеров PLaywright
 RUN npx playwright install --with-deps
 
+# Создание директории для отчета
+RUN mkdir -p /usr/src/app/playwright-report
+
 # Команда для запука тестов
-CMD ["npx", "playwright", "test", "--grep=demoqa.textbox.spec.ts", "--reporter=html"]
+CMD ["npx", "playwright", "test", "--grep=demoqa.textbox.spec.ts", "--reporter=html", "--output=playwright-report"]
