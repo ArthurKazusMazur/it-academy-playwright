@@ -20,4 +20,4 @@ RUN npx playwright install --with-deps
 RUN mkdir -p /usr/src/app/playwright-report
 
 # Команда для запука тестов
-CMD ["npx", "playwright", "test", "--grep=demoqa.textbox.spec.ts", "--reporter=html", "--output=playwright-report"]
+CMD ["npx", "playwright", "test", "--grep=demoqa.textbox.spec.ts", "--reporter=html"]
